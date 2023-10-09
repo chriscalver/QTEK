@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.hide {
+  display: none;
+}
+    
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}
+</style>
+</head>
+<body>
+
+<div>
+    
+<img id="" src="Pics/ACP.png" width="250" alt=""/>
+</div>
+
+<div>
+<img id="" src="Pics/QTEK.jpg" width="250" alt=""/>
+<div>
+<img id="imageid" src="Pics/layout.png" alt="" usemap="#Map" />
+</div>
+
+<map name="Map" id="Map">
+    <area alt="penta" title="" coords="185,224,31,10" shape="rect" onmouseover="mouseover('penta')"
+onmouseleave="mouseleave()"   
+/>
+<area alt="cr1" title="" coords="257,96,217,167" shape="rect" onmouseover="mouseover('cr1')"
+onmouseleave="mouseleave()"
+/>   
+<area alt="cr2" title="" coords="303,166,263,97" shape="rect" onmouseover="mouseover('cr2')"
+onmouseleave="mouseleave()"
+/> 
+
+</div>
+    <!--
+        
+
+
+
+    <area alt="twitter" title="" shape="poly" coords="177,214,193,277,475,212,466,149" onmouseover="mouseover('twitter')"
+onmouseleave="mouseleave()"    
+    />
+        <area alt="instagram" title="" shape="poly" coords="177,214,193,277,475,212,466,149" onmouseover="mouseover('instagram')"
+onmouseleave="mouseleave()"    
+    />
+     etc 
+     
+     
+     -->
+</map>
+
+
+
+<script>
+  function mouseover(x) {
+  switch (x) {
+    case 'penta':
+      {
+        document.getElementById("imageid").src = "Pics/layoutpenta.png";
+      };
+      break;
+    case 'cr1':
+      {
+        document.getElementById("imageid").src = "Pics/layoutcr1.png";
+      };
+      break;
+    case 'cr2':
+      {
+        document.getElementById("imageid").src = "Pics/layoutcr2.png";
+      };
+      break;
+      // etc... 
+    default:
+      ;
+      break;
+  }
+
+}
+
+// reset the image when the user isn't hovering.
+function mouseleave() {
+  document.getElementById("imageid").src = "Pics/layout.png";
+}
+  
+</script>
+    
+
+
+
+
+</body>
+</html>
